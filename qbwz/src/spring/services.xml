@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/jaxws 
+		http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<!-- SPRING发布WEB服务配置 -->
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	
+	<!-- 成绩查询 -->
+	<jaxws:client id="achievement"
+		address="http://localhost:8090/ExamRegService/services/achievement"
+		serviceClass="net.xqx.service.achievement.AchievementService">
+
+		<jaxws:outInterceptors>
+			<bean
+				class="org.apache.cxf.interceptor.LoggingOutInterceptor" />
+			<bean
+				class="org.apache.cxf.binding.soap.saaj.SAAJOutInterceptor" />
+			<bean
+				class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+				<constructor-arg>
+					<map>
+						<entry key="action" value="UsernameToken" />
+						<entry key="passwordType"
+							value="PasswordDigest" />
+						<entry key="passwordCallbackRef">
+							<ref bean="clientPasswordCallback" />
+						</entry>
+					</map>
+				</constructor-arg>
+			</bean>
+		</jaxws:outInterceptors>
+	</jaxws:client>
+	
+	<!-- 从业人员查询 -->
+	<jaxws:client id="certificate"
+		address="http://localhost:8090/ExamRegService/services/certificate"
+		serviceClass="net.xqx.service.certificate.CertificateRegService">
+
+		<jaxws:outInterceptors>
+			<bean
+				class="org.apache.cxf.interceptor.LoggingOutInterceptor" />
+			<bean
+				class="org.apache.cxf.binding.soap.saaj.SAAJOutInterceptor" />
+			<bean
+				class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+				<constructor-arg>
+					<map>
+						<entry key="action" value="UsernameToken" />
+						<entry key="passwordType"
+							value="PasswordText" />
+						<entry key="user" value="cxfClient" />
+						<entry key="passwordCallbackRef">
+							<ref bean="clientPasswordCallback" />
+						</entry>
+					</map>
+				</constructor-arg>
+			</bean>
+		</jaxws:outInterceptors>
+	</jaxws:client>
+
+	<bean id="clientPasswordCallback"
+		class="net.xqx.ws.ClientPasswordCallback" />
+</beans>

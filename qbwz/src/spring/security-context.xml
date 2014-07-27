@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns="http://www.springframework.org/schema/security">
+	<!-- 不限制访问的url -->
+	<http security="none" pattern="/admin/loginUI.do*" />
+	<http security="none" pattern="/admin/login.jsp*" />
+	<http security="none" pattern="/index.jsp*" />
+	<!-- 不拦截图片，js，css -->
+	<http pattern="/**/*.jpg" security="none" />  
+  	<http pattern="/**/*.png" security="none" />  
+  	<http pattern="/**/*.gif" security="none" />  
+  	<http pattern="/**/*.css" security="none" />  
+  	<http pattern="/**/*.js" security="none" />
+	
+	<http access-denied-page="/index.jsp" auto-config="true">
+		<!-- 配置此处应注意先后顺序，从最严格到宽松匹配  -->
+		<intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
+		<intercept-url pattern="/views/admin/**" access="ROLE_ADMIN" />
+
+		<!-- 登录配置 -->
+		<form-login always-use-default-target="true" authentication-failure-url="/admin/loginUI.do?error=1"
+			default-target-url="/views/admin/index.do" login-page="/admin/loginUI.do" />
+		<logout />
+		<!-- 前置拦截器调用 -->
+		<custom-filter ref="myUsernamePasswordAuthenticationFilter" before="FORM_LOGIN_FILTER"/> 
+	</http>
+	
+	<!-- 配置自己写的前置拦截器 -->
+	<beans:bean class="net.xqx.security.MyUsernamePasswordAuthenticationFilter" id="myUsernamePasswordAuthenticationFilter">
+		<beans:property name="authenticationManager" ref="authenticationManager"></beans:property>
+		<beans:property name="authenticationSuccessHandler" ref="loginLogAuthenticationSuccessHandler"></beans:property>
+		<beans:property name="authenticationFailureHandler" ref="simpleUrlAuthenticationFailureHandler"></beans:property>
+	</beans:bean>
+	
+	<!-- 验证成功后页面跳转 -->
+	 <beans:bean id="loginLogAuthenticationSuccessHandler"  
+        class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">  
+        <beans:property name="defaultTargetUrl" value="/admin/login.do"></beans:property>  
+    </beans:bean>  
+    
+    <!-- 验证失败后页面跳转 -->
+    <beans:bean id="simpleUrlAuthenticationFailureHandler"  
+        class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">  
+        <!-- 可以配置相应的跳转方式。属性forwardToDestination为true采用forward false为sendRedirect -->  
+        <beans:property name="defaultFailureUrl" value="/admin/loginUI.do?error=1"></beans:property>  
+    </beans:bean> 
+	
+	<!-- userDetailsService配置 -->
+	<beans:bean class="net.xqx.security.UserDetailsServiceImpl" id="userDetailsService" />
+	<!-- 调用userDetailsService,并增加别名alias为自己写的前置拦截器提供调用 -->
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userDetailsService" >
+           </authentication-provider>
+	</authentication-manager>
+	
+</beans:beans>

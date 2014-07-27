@@ -1,0 +1,26 @@
+.login_top{
+background-image: url("login_top.jpg");
+background-repeat: repeat-x;
+height:47px;
+}
+.login_center{
+	background-image: url("login_bg.jpg");
+	background-repeat: no-repeat;
+	height: 622px;
+	text-align: center;
+}
+.login_loginCenter{
+	background-image: url("login_Center.jpg");
+	background-repeat: no-repeat;
+	height: 181px;
+	width:289px;
+	text-align: center;
+}
+.login_submit{
+	background-image: url("login_btn_submit.jpg");
+}
+.login_bottom{
+background-image: url("login_bottom.jpg");
+background-repeat: repeat-x;
+height:57px;
+}

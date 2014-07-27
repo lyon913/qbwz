@@ -1,0 +1,145 @@
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(1,null,'新闻动态',1,null,0);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(5,null,'下载中心',1,null,0);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(6,null,'咨询留言',1,null,0);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(10,null,'系统管理',1,null,0);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(11,null,'友情链接',1,null,0);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(12,null,'广告管理',1,null,0);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(100,null,'管理员管理',10,'admin/adminList.do',10);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(101,null,'权限管理',9,'admin/funcManageUI.do',10);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(102,null,'权限分配',8,'admin/func.do',10);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(110,null,'信息发布',10,'admin/addNewsUI.do',1);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(111,null,'信息审核',9,'admin/examineManage.do',1);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(112,null,'信息管理',8,'admin/newsManage.do',1);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(150,null,'信息发布',10,'admin/addXzzxUI.do',5);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(151,null,'信息审核',9,'admin/xzzxManage.do',5);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(152,null,'信息管理',8,'admin/xzzxPassManage.do',5);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(160,null,'留言审核',10,'admin/lyshNewsManage.do',6);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(161,null,'留言回复',9,'admin/lyshNewsPassManage.do',6);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(200,null,'图片链接',10,'admin/tpljLinksManage.do',11);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(201,null,'文字链接',9,'admin/wzljLinksManage.do',11);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(210,null,'广告发布',8,'admin/readysavegg.do',12);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(212,null,'广告管理',7,'admin/ggchecklist.do',12);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(310,null,'添加广告位',10,'views/admin/ggw/addggw.jsp',12);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(311,null,'广告位管理',1,'admin/ggwlist.do',12);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(312,null,'栏目管理',1,null,0);
+insert into TFuncList(id,fFuncMemo,fFuncName,fFuncSort,fFuncURL,fid) values(313,null,'栏目管理',1,'admin/classList.do',312);
+
+
+insert into TFuncGroup(id,fFuncGroupMemo,fFuncGroupName,fFuncRights) values(1,null,'默认管理员','1,110,111,112,5,150,151,152,6,160,161,10,100,101,102,312,11,200,201,12,210,212,310,311,312,313');
+insert into TFuncGroup(id,fFuncGroupMemo,fFuncGroupName,fFuncRights) values(2,null,'超级管理员','1,110,112,113,114,115,2,120,121,122,3,130,131,132,4,140,141,142,5,150,151,152,6,160,161,7,170,171,172,8,180,181,182,183,9,190,191,192,10,100,101,102,11,200,201,12,210,211,212');
+
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(1,'医院概况','医院概况',1,0,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(2,'就医指南','就医指南',1,0,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(3,'新闻动态','新闻动态',1,0,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(4,'科室介绍','科室介绍',1,0,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(5,'政务栏','政务栏',1,0,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(6,'信息公开','信息公开',1,0,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(7,'健康之苑','健康之苑',1,0,null);
+
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(8,'医院简介','医院简介',1,1,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(9,'医院沿革','医院沿革',1,1,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(10,'医院组织结构','医院组织结构',1,1,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(11,'管理理念','管理理念',1,1,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(12,'服务目标','服务目标',1,1,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(13,'服务理念','服务理念',1,1,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(14,'院训','院训',1,1,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(15,'医疗设备','医疗设备',1,1,null);
+
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(16,'门诊就诊须知','门诊就诊须知',1,2,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(17,'门诊就诊流程','门诊就诊流程',1,2,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(18,'急诊就诊流程','急诊就诊流程',1,2,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(19,'住院就诊流程','住院就诊流程',1,2,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(20,'检查须知','检查须知',1,2,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(21,'如何选科室','如何选科室',1,2,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(22,'楼层导航','楼层导航',1,2,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(23,'预约挂号','预约挂号',1,2,null);
+
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(24,'内分泌代谢科','内分泌代谢科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(25,'功能科','功能科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(26,'急诊创伤外科','急诊创伤外科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(27,'磁共振科','磁共振科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(28,'口腔颌面外科','口腔颌面外科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(29,'肝胆外科','肝胆外科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(30,'重症医学科','重症医学科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(31,'生殖遗传科','生殖遗传科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(32,'眼科','眼科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(33,'心血管内科','心血管内科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(34,'泌尿外科','泌尿外科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(35,'麻醉手术科','麻醉手术科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(36,'输血科','输血科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(37,'风湿免疫科','风湿免疫科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(38,'肾内科','肾内科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(39,'血液内科','血液内科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(40,'普外一科','普外一科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(41,'普外二科','普外二科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(42,'呼吸内科','呼吸内科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(43,'耳鼻喉科','耳鼻喉科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(44,'骨科','骨科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(45,'妇科','妇科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(46,'肛肠科','肛肠科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(47,'传染科','传染科',1,4,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(48,'乳腺、甲状腺、肿','乳腺、甲状腺、肿',1,4,null);
+
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(49,'医院党务','医院党务',1,5,null);
+insert into TClass(id,fClassMemo,fClassName,fSortFlag,fid,typeId) values(50,'医院政务','医院政务',1,5,null);
+
+       
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (1,0,'新闻中心','医院概况');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (2,0,'新闻中心','就医指南');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (3,0,'新闻中心','新闻动态');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (4,0,'新闻中心','科室介绍');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (5,0,'新闻中心','政务栏');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (6,0,'新闻中心','信息公开');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (7,0,'新闻中心','健康之苑');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (8,1,'医院简介','医院简介');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (9,1,'医院沿革','医院沿革');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (10,1,'医院组织结构','医院组织结构');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (11,1,'管理理念','管理理念');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (12,1,'服务目标','服务目标');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (13,1,'服务理念','服务理念');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (14,1,'院训','院训');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (15,1,'医疗设备','医疗设备');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (16,2,'门诊就诊须知','门诊就诊须知');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (17,2,'门诊就诊流程','门诊就诊流程');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (18,2,'急诊就诊流程','急诊就诊流程');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (19,2,'住院就诊流程','住院就诊流程');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (20,2,'检查须知','检查须知');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (21,2,'如何选科室','如何选科室');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (22,2,'楼层导航','楼层导航');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (23,2,'预约挂号','预约挂号');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (24,4,'内分泌代谢科','内分泌代谢科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (25,4,'功能科','功能科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (26,4,'急诊创伤外科','急诊创伤外科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (27,4,'磁共振科','磁共振科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (28,4,'口腔颌面外科','口腔颌面外科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (29,4,'肝胆外科','肝胆外科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (30,4,'重症医学科','重症医学科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (31,4,'生殖遗传科','生殖遗传科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (32,4,'眼科','眼科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (33,4,'心血管内科','心血管内科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (34,4,'泌尿外科','泌尿外科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (35,4,'麻醉手术科','麻醉手术科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (36,4,'输血科','输血科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (37,4,'风湿免疫科','风湿免疫科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (38,4,'肾内科','肾内科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (39,4,'血液内科','血液内科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (40,4,'普外一科','普外一科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (41,4,'普外二科','普外二科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (42,4,'呼吸内科','呼吸内科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (43,4,'耳鼻喉科','耳鼻喉科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (44,4,'骨科','骨科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (45,4,'妇科','妇科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (46,4,'肛肠科','肛肠科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (47,4,'传染科','传染科');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (48,4,'乳腺、甲状腺、肿','乳腺、甲状腺、肿');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (49,5,'医院党务','医院党务');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (50,5,'医院政务','医院政务');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (51,0,'新闻中心','信息公告');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (52,0,'新闻中心','专家介绍');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (53,0,'链接类型','文字链接');
+INSERT INTO TProperty (id, fId, fName, fValue) VALUES (54,0,'链接类型','图片链接');
+
+
+
+
+insert into TAdmin(id,fAdminName,fAdminPassword,fFuncGroup)values(1,'sa','81DC9BDB52D04DC20036DBD8313ED055',1);
