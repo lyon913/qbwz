@@ -687,6 +687,42 @@ height:698px!important;
 padding-top:7px;
 }
 
+.kepu1{
+	float:right;
+	width: 212px;
+	height:100%;
+	margin-top:6px;
+}
+
+.zjnwdaohang1{
+width:212px;
+height:35px;
+height:35px!important;
+background:url(../images/zzjshao.jpg);
+background-repeat:no-repeat;
+color:#01769E;
+font: bold bold 14px Arial, "宋体" ,Helvetica,sans-serif;
+
+}
+
+.zjnwnrzong1{
+width:212px;
+height:698px;
+height:725px!important;
+border-left:1px solid #E1E1E1;
+border-right:1px solid #E1E1E1;
+border-bottom:1px solid #E1E1E1;
+padding-top:3px;
+font: 14px Arial, "宋体" ,Helvetica,sans-serif;
+}
+
+.zjnwnr1{
+width:212px;
+height:698px;
+height:698px!important;
+padding-top:7px;
+}
+
 .tupian{
 width:96px;
 height:120px;
@@ -792,8 +828,7 @@ font: bold bold 14px Arial, "宋体" ,Helvetica,sans-serif;
 
 .ernr{
 width:211px;
-height:320px;
-height:320px!important;
+height:100%;
 font:14px Arial, "宋体" ,Helvetica,sans-serif;
 }
 

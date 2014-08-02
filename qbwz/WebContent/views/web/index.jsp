@@ -324,7 +324,7 @@ $(function(){
 												<td width="54" height="34" align="center"><img
 													src="<%=basePath%>views/web/images/zwbz.gif" width="24"
 													height="20" /></td>
-												<td width="304" valign="middle">健康讲坛</td>
+												<td width="304" valign="middle">健康之苑</td>
 												<td width="67" valign="middle"><a
 													href="<%=basePath%>zxzxnews.do?type=7" target="_blank"><img
 														src="<%=basePath%>views/web/images/more3.gif" width="40"
@@ -371,10 +371,7 @@ $(function(){
 									<td width="47" valign="middle"><table width="53"
 											border="0" cellspacing="0">
 											<tr>
-												<td width="51" height="19" valign="bottom"><a
-													href="<%=basePath%>zxzxnews.do?type=52"><img
-														src="<%=basePath%>views/web/images/morew.jpg" width="30"
-														height="10" border="0" /></a></td>
+												<td width="51" height="19" valign="bottom"></td>
 											</tr>
 										</table></td>
 								</tr>
@@ -385,7 +382,7 @@ $(function(){
 							<div id="mar" class="zjnwnr" style="height: 100%;overflow: hidden;">
 								<ul>
 
-									<c:forEach items="${zjjs}" var="zj" begin="0" end="3">
+									<c:forEach items="${zjjs}" var="zj">
 										<li style="text-align: center;">
 										
 										<a href="<%=basePath %>showZxzxNews.do?id=${zj.id}"

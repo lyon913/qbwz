@@ -187,7 +187,7 @@ public class NewsController implements ServletContextAware {
 		if (p != null && !"".equals(p)) {
 			page = Integer.parseInt(p);
 		}
-		Sort sort = new Sort(Direction.DESC,"fSort","ffbTime");
+		Sort sort = new Sort(Direction.DESC,"ffbTime");
 		Pageable pageable = new PageRequest(page, 15, sort);
 		Page<TNews> pageNews = newsDao.getExamineNews(pageable);
 		
@@ -225,7 +225,7 @@ public class NewsController implements ServletContextAware {
 		if (p != null && !"".equals(p)) {
 			page = Integer.parseInt(p);
 		}
-		Sort sort = new Sort(Direction.DESC, "fSort","ffbTime");
+		Sort sort = new Sort(Direction.DESC, "ffbTime");
 		Pageable pageable = new PageRequest(page, 15, sort);
 		//Page<TNews> pageNews = newsDao.getNewsManage(pageable);
 		Page<TNews> pageNews;

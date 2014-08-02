@@ -668,6 +668,9 @@ public class ThreeLevelController
 				}
 				newsDao.save(news);
 				
+				Sort sort = new Sort(Direction.DESC, "fSortFlag", "fzdTime","fSort", "ffbTime");
+				Pageable pageable1 = new PageRequest(0, 8, sort);
+				
 				request.setAttribute("property", news.getFlxFirst());
 				request.setAttribute("property1", news.getFlxSecond());
 				//就医指南
@@ -695,6 +698,24 @@ public class ThreeLevelController
 					List<TProperty> jkzy=propertyDao.getPropertyByFid(7L);
 					request.setAttribute("jkzy", jkzy);
 			}
+				//专家介绍
+				if(news.getFlxFirst()!=null&&news.getFlxFirst().getId()==52){
+					List<TNews> zjjs=newsDao.getNewsByFirstId(52L);
+					request.setAttribute("zjjs", zjjs);
+			}
+				//新闻动态导航栏
+				if(news.getFlxFirst()!=null&&news.getFlxFirst().getId()==3){
+							List<TProperty> dh=propertyDao.getPropertyByfName("新闻中心");
+							request.setAttribute("dh", dh);
+				}else{
+					Pageable pageable2 = new PageRequest(0, 5, sort);
+					Page<TNews> xwdt = newsDao.getNewsByFirstId(3L, pageable2);//除了新闻动态类别外，其他左边菜单都显示新闻动态内容
+					request.setAttribute("xwdt", xwdt.getContent());
+				}
+				
+				Page<TNews> tjyd = newsDao.getNewsRec(pageable1);
+				request.setAttribute("tjyd", tjyd.getContent());
+				
 				List<TNewsPic> newsPicList = null;
 				newsPicList = newsPicDao.getByNewsId(Long.parseLong(id));
 				request.setAttribute("newsPicList", newsPicList);
@@ -775,6 +796,16 @@ public class ThreeLevelController
 		// 科室介绍
 					List<TProperty> ksjs=propertyDao.getPropertyByFid(4L);
 					request.setAttribute("ksjs", ksjs);
+					
+					Sort sort1 = new Sort(Direction.DESC, "fSortFlag", "fzdTime","fSort", "ffbTime");
+					Pageable pageable1 = new PageRequest(0,8,sort1);
+					Page<TNews> tjyd = newsDao.getNewsRec(pageable1);
+					request.setAttribute("tjyd", tjyd.getContent());
+					
+					//新闻动态
+					Pageable pageable2 = new PageRequest(0, 5, sort1);
+					Page<TNews> xwdt = newsDao.getNewsByFirstId(3L, pageable2);//除了新闻动态类别外，其他左边菜单都显示新闻动态内容
+					request.setAttribute("xwdt", xwdt.getContent());
 		
 	}
 		

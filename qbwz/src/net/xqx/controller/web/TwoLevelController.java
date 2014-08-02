@@ -395,7 +395,8 @@ public class TwoLevelController
 		{
 			page = Integer.valueOf(request.getParameter("page"));
 		}
-		Pageable pageable = new PageRequest(page, 18, sort);
+		Pageable pageable = new PageRequest(page, 20, sort);
+		Pageable pageable1 = new PageRequest(0, 8, sort);
 
 		// 科室介绍
 		List<TProperty> ksjs=propertyDao.getPropertyByFid(4L);
@@ -425,6 +426,20 @@ public class TwoLevelController
 			List<TProperty> jkzy=propertyDao.getPropertyByFid(7L);
 			request.setAttribute("jkzy", jkzy);
 		}
+		//新闻动态导航栏
+		if("3".equals(type)){
+					List<TProperty> dh=propertyDao.getPropertyByfName("新闻中心");
+					request.setAttribute("dh", dh);
+		}
+		else{
+			Pageable pageable2 = new PageRequest(0, 5, sort);
+			Page<TNews> xwdt = newsDao.getNewsByFirstId(3L, pageable2);//除了新闻动态类别外，其他左边菜单都显示新闻动态内容
+			request.setAttribute("xwdt", xwdt.getContent());
+		}
+		
+		Page<TNews> tjyd = newsDao.getNewsRec(pageable1);
+		request.setAttribute("tjyd", tjyd.getContent());
+		
 		Page<TNews> newsPage = null;// 新闻
 		
 		if (type != null && !"".equals(type) && typeId != null && !"".equals(typeId))
@@ -481,11 +496,20 @@ public class TwoLevelController
 		
 
 		// 科室介绍
-		List<TProperty> ksjs=propertyDao.getPropertyByFid(4L);
-		request.setAttribute("ksjs", ksjs);
+		//List<TProperty> ksjs=propertyDao.getPropertyByFid(4L);
+		//request.setAttribute("ksjs", ksjs);
+		Sort sort = new Sort(Direction.DESC, "fSortFlag", "fzdTime","fSort", "ffbTime");
+		Pageable pageable1 = new PageRequest(0,8,sort);
+		Page<TNews> tjyd = newsDao.getNewsRec(pageable1);
+		request.setAttribute("tjyd", tjyd.getContent());
+		
+		//新闻动态
+		Pageable pageable2 = new PageRequest(0, 5, sort);
+		Page<TNews> xwdt = newsDao.getNewsByFirstId(3L, pageable2);//除了新闻动态类别外，其他左边菜单都显示新闻动态内容
+		request.setAttribute("xwdt", xwdt.getContent());
 		
 		//投诉新闻
-		Sort sort = new Sort(Direction.DESC, "fSortFlag", "fzdTime", "ffbTime");
+		//Sort sort = new Sort(Direction.DESC, "fSortFlag", "fzdTime", "ffbTime");
 		Pageable pageable = new PageRequest(0, 1, sort);
 		List<TProperty> firstIdList = propertyDao.getPropertyByfValue("新闻中心","投诉");
 		if(firstIdList!=null&&firstIdList.size()>0){
