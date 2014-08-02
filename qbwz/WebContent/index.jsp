@@ -8,7 +8,7 @@
 </head>
 <body>
 	<%
-		response.sendRedirect("index.do");
+		response.sendRedirect("index.do"); 
 	%>
 </body>
 </html>
