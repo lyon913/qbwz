@@ -16,7 +16,7 @@
 <body>
 <div id="foot">
   <div class="footnr">
-    <p>版权所有&nbsp; &nbsp;<a href="admin/loginUI.do" class="a3">丘北县人民医院</a> 保留所有权利
+    <p>版权所有&nbsp; &nbsp;丘北县人民医院  保留所有权利
     &nbsp; &nbsp; 单位地址：云南省文山壮族苗族自治州丘北县锦屏镇石缸坝普碳路旁
 
 &nbsp; &nbsp;  邮政编码：663200    </p>
