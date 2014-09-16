@@ -700,7 +700,7 @@ public class ThreeLevelController
 			}
 				//专家介绍
 				if(news.getFlxFirst()!=null&&news.getFlxFirst().getId()==52){
-					List<TNews> zjjs=newsDao.getNewsByFirstId(52L);
+					List<TNews> zjjs=newsDao.getZjs(52L);
 					request.setAttribute("zjjs", zjjs);
 			}
 				//新闻动态导航栏

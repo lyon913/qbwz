@@ -201,4 +201,13 @@ public interface NewsDao extends JpaRepository<TNews, Long> {
 	 */
 	@Query("select a from TNews a where a.fIsPass=1  and a.fIsShow=1 and a.flxFirst.id=? order by fSort Desc")
 	public List<TNews> getNewsByFirstId(Long firstId);
+	
+	/**
+	 * 专家列表
+	 * 
+	 * @param pageable
+	 * @return
+	 */
+	@Query("select a from TNews a where a.fIsPass=1  and a.fIsShow=1 and a.flxFirst.id=? order by fSort")
+	public List<TNews> getZjs(Long firstId);
 }

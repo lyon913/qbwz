@@ -115,7 +115,7 @@ public class IndexController {
 		Page<TNews> jkzy=newsDao.getNewsByFirstId(7L,pageable);
 		request.setAttribute("jkzy", jkzy.getContent());
 		//专家介绍
-		List<TNews> zjjs=newsDao.getNewsByFirstId(52L);
+		List<TNews> zjjs=newsDao.getZjs(52L);
 		request.setAttribute("zjjs", zjjs);
 		
 		//推荐阅读

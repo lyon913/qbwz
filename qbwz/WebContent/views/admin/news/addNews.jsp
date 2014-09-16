@@ -102,7 +102,7 @@ body {
 									<tr>
 										<td height="30" align="right" bgcolor="#f2f2f2">顺序：</td>
 										<td bgcolor="#f2f2f2">&nbsp;</td>
-										<td height="30" bgcolor="#f2f2f2"><input name="fSort" type="text" size="15"  value="1"/><font color="red">*</font>数字越大越排在前面</td>
+										<td height="30" bgcolor="#f2f2f2"><input name="fSort" type="text" size="15"  value="1"/><font color="red">*</font>新闻类：数字越大越排在前面；专家介绍：数字越小越排在前面</td>
 									</tr>
 								
 									<tr>
