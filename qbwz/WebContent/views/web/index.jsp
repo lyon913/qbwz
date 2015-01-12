@@ -429,5 +429,6 @@ $(function(){
 
 </div>
 <jsp:include page="inc/foot.jsp" />
+
 </body>
 </html>

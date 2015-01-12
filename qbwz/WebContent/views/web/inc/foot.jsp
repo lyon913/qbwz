@@ -22,8 +22,10 @@
 &nbsp; &nbsp;  邮政编码：663200    </p>
     <p> 投诉电话：0876-4121447   &nbsp;  &nbsp;咨询电话：0876-4121447 
       &nbsp; &nbsp;  邮箱：qbrmyy@126.com</p>
-    <p>&nbsp; &nbsp; 备案/许可证号:&nbsp;&nbsp;  </p>
+    <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript   src='http://dcs.conac.cn/js/25/364/2394/60354396/CA253642394603543960001.js' type='text/javascript'%3E%3C/script%3E"));</script>
+    
   </div>
 </div>
+
 </body>
 </html>
