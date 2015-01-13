@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@	taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -20,8 +20,7 @@
     &nbsp; &nbsp; 单位地址：云南省文山壮族苗族自治州丘北县锦屏镇石缸坝普碳路旁
 
 &nbsp; &nbsp;  邮政编码：663200    </p>
-    <p> 投诉电话：0876-4121447   &nbsp;  &nbsp;咨询电话：0876-4121447 
-      &nbsp; &nbsp;  邮箱：qbrmyy@126.com</p>
+    <p> 投诉电话：0876-4121447   &nbsp;  &nbsp;滇ICP备案号：53262603302002</p>
     <script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript   src='http://dcs.conac.cn/js/25/364/2394/60354396/CA253642394603543960001.js' type='text/javascript'%3E%3C/script%3E"));</script>
     
   </div>
